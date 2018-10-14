@@ -31,6 +31,7 @@ public class PatientProfile extends AppCompatActivity{
     public static final String WEIGHT_KEY = "weight";
     public static final String DOCTOR_KEY = "doctor";
     public static final String MEDCONDITION_KEY = "medCondition";
+    public static final String TAG = "PatientProfile";
 
     private DocumentReference mDocRef = FirebaseFirestore.getInstance().document("profile/patient");
 

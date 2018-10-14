@@ -33,20 +33,4 @@ public class MainActivity extends AppCompatActivity {
         super.attachBaseContext(base);
         MultiDex.install(this);
     }
-
-
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.radio_male:
-                if (checked)
-                    break;
-            case R.id.radio_female:
-                if (checked)
-                    break;
-        }
-    }
 }
