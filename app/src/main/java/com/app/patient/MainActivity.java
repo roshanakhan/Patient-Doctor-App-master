@@ -26,6 +26,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button DoctorMenuBtn = (Button) findViewById(R.id.doctor_btn);
+        DoctorMenuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DoctorLogin.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override

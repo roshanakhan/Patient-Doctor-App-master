@@ -19,9 +19,9 @@ import java.util.HashMap;
 import java.util.Map;
 //import com.google.firebase.quickstart.auth.R;
 
-public class PatientLogin extends BaseActivity implements View.OnClickListener {
+public class DoctorLogin extends BaseActivity implements View.OnClickListener {
 
-    private static final String TAG = "EmailPassword";
+    private static final String TAG = "EmailPassword2";
 
     private TextView mStatusTextView;
     private TextView mDetailTextView;
@@ -36,7 +36,7 @@ public class PatientLogin extends BaseActivity implements View.OnClickListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_emailpassword);
+        setContentView(R.layout.activity_emailpassword2);
 
         // Views
         mStatusTextView = findViewById(R.id.status);
@@ -89,7 +89,7 @@ public class PatientLogin extends BaseActivity implements View.OnClickListener {
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(PatientLogin.this, "Authentication failed.",
+                            Toast.makeText(DoctorLogin.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                             updateUI(null);
                         }
@@ -132,12 +132,12 @@ public class PatientLogin extends BaseActivity implements View.OnClickListener {
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
-                            Intent intent = new Intent(PatientLogin.this, PatientMenu.class);
+                            Intent intent = new Intent(DoctorLogin.this, DoctorMenu.class);
                             startActivity(intent);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(PatientLogin.this, "Authentication failed, check your eamil and password",
+                            Toast.makeText(DoctorLogin.this, "Authentication failed, check your eamil and password",
                                     Toast.LENGTH_SHORT).show();
                             updateUI(null);
                         }
@@ -177,12 +177,12 @@ public class PatientLogin extends BaseActivity implements View.OnClickListener {
                         findViewById(R.id.verifyEmailButton).setEnabled(true);
 
                         if (task.isSuccessful()) {
-                            Toast.makeText(PatientLogin.this,
+                            Toast.makeText(DoctorLogin.this,
                                     "Verification email sent to " + user.getEmail(),
                                     Toast.LENGTH_SHORT).show();
                         } else {
                             Log.e(TAG, "sendEmailVerification", task.getException());
-                            Toast.makeText(PatientLogin.this,
+                            Toast.makeText(DoctorLogin.this,
                                     "Failed to send verification email.",
                                     Toast.LENGTH_SHORT).show();
                         }

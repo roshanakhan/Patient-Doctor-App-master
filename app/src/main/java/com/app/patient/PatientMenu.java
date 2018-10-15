@@ -107,7 +107,7 @@ public class PatientMenu extends AppCompatActivity {
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PatientMenu.this, MapActivity.class);
+                Intent intent = new Intent(PatientMenu.this, MapsActivity.class);
                 startActivity(intent);
             }
         });}

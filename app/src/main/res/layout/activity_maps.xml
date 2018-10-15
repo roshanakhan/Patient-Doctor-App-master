@@ -43,7 +43,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="return" />
+        android:text="return"
+        android:onClick="onReturnClick"/>
 
     <TextView
         android:id="@+id/positionView"

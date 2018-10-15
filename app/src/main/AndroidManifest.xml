@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBWpiX9PNdF-9tYcRUHx8bLpIYPdrBdrCw"/>
+            android:value="AIzaSyCFOABkE21CyvjzMkwhi4kPDYmGEaHJj08"/>
 
 
         <meta-data
@@ -32,9 +32,12 @@
         </activity>
         <activity android:name=".PatientLogin"/>
         <activity android:name=".PatientMenu"/>
-        <activity android:name=".MapActivity"/>
         <activity android:name=".PatientProfile"/>
         <activity android:name=".heartrate"/>
+        <activity android:name=".MapsActivity"/>
+        <activity android:name=".DoctorLogin"/>
+        <activity android:name=".DoctorMenu"/>
+        <activity android:name=".DoctorProfile"/>
 
     </application>
 
