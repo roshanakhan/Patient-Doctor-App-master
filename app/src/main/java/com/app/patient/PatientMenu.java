@@ -91,7 +91,7 @@ public class PatientMenu extends AppCompatActivity {
     private static final int ERROR_DIALOG_REQUEST = 9001;
     Button btnMap;
     Button btnPatientProfile;
-    Button btnheartrate;
+    Button btnPatientActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,7 +99,7 @@ public class PatientMenu extends AppCompatActivity {
         setContentView(R.layout.patient_menu);
         btnMap = (Button)findViewById(R.id.map);
         btnPatientProfile = (Button)findViewById(R.id.profile);
-        btnheartrate = (Button)findViewById(R.id.heartrate);
+        btnPatientActivity = (Button)findViewById(R.id.patientactivity);
     }
 
     public void onMapCLick(View v){
@@ -123,11 +123,11 @@ public class PatientMenu extends AppCompatActivity {
         });
     }
 
-    public void onHeartrateCLick(View v){
-        btnheartrate.setOnClickListener(new View.OnClickListener() {
+    public void onPatientActivityCLick(View v){
+        btnPatientActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PatientMenu.this, heartrate.class);
+                Intent intent = new Intent(PatientMenu.this, PatientActivity.class);
                 startActivity(intent);
             }
         });

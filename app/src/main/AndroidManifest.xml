@@ -38,6 +38,8 @@
         <activity android:name=".DoctorLogin"/>
         <activity android:name=".DoctorMenu"/>
         <activity android:name=".DoctorProfile"/>
+        <activity android:name=".DoctorFeedback"/>
+        <activity android:name=".PatientActivity"/>
 
     </application>
 
